@@ -195,20 +195,34 @@ footer textarea {
 }
 
 /* Responsive Media Query */
-.hide {
-  display: none;
-}
-
 @media screen and (max-width: 576px) {
   .skills-container,
   .resume-container,
+  nav,
+  nav > ul,
   footer,
-  .about-items {
+  .about-items,
+  .banner {
     flex-direction: column;
+  }
+  nav > ul{
+    gap: 10px;
+  }
+  .btn-primary{
+    margin-bottom: 20px;
   }
   footer,
   .about {
     padding: 20px;
+  }
+  .banner{
+    margin: 20px;
+  }
+  .header{
+    background-image: none;
+  }
+  .banner-profile-pic{
+    width: 100%;
   }
   .footer-column {
     width: 100%;
@@ -218,4 +232,11 @@ footer textarea {
   footer textarea {
     width: calc(100% - 40px);
   }
+}
+
+/* Tablet Media Query */
+@media screen and (min-width: 576px) and (max-width: 990px) {
+    .banner{
+        flex-direction: column;
+    }
 }
